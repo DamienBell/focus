@@ -32,7 +32,7 @@ FocusModel.prototype.runfocus = function(cb){
     if(cb){
       cb();
     }
-  },650);
+  },750);
 }
 FocusModel.prototype.increment = function(){
  if (this.index < this.nodes.length - 1){
