@@ -25,7 +25,6 @@ function FocusModel($header, nodes = [], options = {}) {
 }
 
 FocusModel.prototype.runfocus = function(cb){
-
   var self = this;
   setTimeout(function(){
     self.focusing = false;
@@ -34,6 +33,7 @@ FocusModel.prototype.runfocus = function(cb){
     }
   },750);
 }
+
 FocusModel.prototype.increment = function(){
  if (this.index < this.nodes.length - 1){
     this.index++;
@@ -148,7 +148,9 @@ $(document).ready(function(){
   $('#scrollover').height(window.innerHeight + (scrolltrigger * 2.0));
   var scrollover = $('#scrollover')[0];
 
-  var options    = {activeHeight: 65, scrolltrigger: scrolltrigger};
+  var options    = {activeHeight: 80,
+                    scrolltrigger: scrolltrigger,
+                    headerHeight: 10};
   var stack      = new FocusModel($header, $nodes, options);
   window.engine  = new FocusRenderEngine(stack);
   engine.render();
