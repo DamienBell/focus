@@ -33,6 +33,7 @@ body{
 }
 
 .focus-content{
+   width: 100%;
    max-width: 750px;
    margin: auto;
    box-sizing: border-box;
