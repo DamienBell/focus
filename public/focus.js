@@ -139,7 +139,7 @@ $(document).ready(function(){
 
   var $header = $('.focus-header');
   var $nodes  = $('.focus-node');
-  var scrolltrigger = window.innerHeight/3.0;
+  var scrolltrigger = 200;
   //ensure we have more than enough height
   $('#scrollover').height(window.innerHeight + (scrolltrigger * 2.0));
   var scrollover = $('#scrollover')[0];
