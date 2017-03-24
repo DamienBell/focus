@@ -111,7 +111,19 @@ blockquote p {
 	only screen and (min-resolution: 120dpi)
 	{
 		/* Your code to swap higher DPI images */
-    background: red;
-    color: red;
-    font-size :4em;
+    @media (max-width: 599px) {
+
+      body{
+        font-size :4em;
+        max-width: 100%;
+      }
+    }
 	}
+
+@media (max-width: 599px) {
+
+  body{
+    font-size :4em;
+    max-width: 100%;
+  }
+}
