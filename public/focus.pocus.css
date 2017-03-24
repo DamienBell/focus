@@ -1,6 +1,11 @@
 body{
  margin: 0px;
 }
+@media only screen and (max-width: 500px) {
+    body {
+      font-size: 1.2em;
+    }
+}
 
 #scrollover{
   height: 0;
