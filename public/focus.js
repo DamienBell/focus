@@ -32,7 +32,7 @@ FocusModel.prototype.runfocus = function(cb){
     if(cb){
       cb();
     }
-  },500);
+  },800);
 }
 FocusModel.prototype.increment = function(){
  if (this.index < this.nodes.length - 1){
@@ -139,7 +139,7 @@ $(document).ready(function(){
 
   var $header = $('.focus-header');
   var $nodes  = $('.focus-node');
-  var scrolltrigger = 200;
+  var scrolltrigger = window.innerHeight/3.0;
   //ensure we have more than enough height
   $('#scrollover').height(window.innerHeight + (scrolltrigger * 2.0));
   var scrollover = $('#scrollover')[0];
