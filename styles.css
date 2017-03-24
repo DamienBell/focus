@@ -1,0 +1,26 @@
+.sound{
+  background: black;
+}
+.controls{
+  margin-bottom: 15px;
+}
+.column{
+  float: left;
+  width: 100%;
+  border-left: 1px gray;
+}
+.column.small{
+  width: 20%
+}
+.column.large{
+    width: 80%
+}
+.form label{
+  width: 100%;
+  float: left;
+  margin: 10px;
+}
+.form textarea{
+  height: 250px;
+  width: 250px;
+}

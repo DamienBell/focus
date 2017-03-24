@@ -1,0 +1,29 @@
+body{
+ margin: 0px;
+}
+
+#scrollover{
+  background: rgba(0,0,0,0.1);
+  height: 0;
+}
+
+#focus{
+  position: fixed;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100vh;
+}
+
+.focus-node{
+  overflow: hidden;
+  transition: height 0.5s;
+  background: gray;
+}
+.focus-content{
+   box-sizing: border-box;
+   border: 1px solid black;
+   background: green;
+   padding: 8px;
+}
