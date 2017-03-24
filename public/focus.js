@@ -32,7 +32,7 @@ FocusModel.prototype.runfocus = function(cb){
     if(cb){
       cb();
     }
-  },800);
+  },650);
 }
 FocusModel.prototype.increment = function(){
  if (this.index < this.nodes.length - 1){
@@ -151,6 +151,9 @@ $(document).ready(function(){
 
   $(window).scroll(function(e){
 
+      if(engine.model.focusing){
+        return;
+      }
       var dist  = Math.abs(scrollover.getBoundingClientRect().top);
 
       if(dist >= (scrolltrigger * 2.0)){
