@@ -1,0 +1,24 @@
+{
+  "name": "focus",
+  "version": "0.0.1",
+  "description": "Screwing around and stuff.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "engines": {
+    "node": "6.9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/wiry-eyeliner"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
