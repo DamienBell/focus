@@ -87,7 +87,7 @@ FocusRenderEngine.prototype.render = function(){
 FocusRenderEngine.prototype.renderNode = function($node, index){
 
  $node.css({minHeight: "auto"});
-
+ $node.removeClass("active");
  var activeIndex    = this.model.index;
  var unopenedCount  = (this.model.nodes.length - 1) - activeIndex;
  var stretch        = this.model.stretch;
@@ -101,6 +101,10 @@ FocusRenderEngine.prototype.renderNode = function($node, index){
 
  if(focusDistance == 0){
   height = activeHeight - stretch;
+  if(unopenedCount == 0){
+    height = 100 - this.model.headerHeight;
+  }
+  $node.addClass("active");
  }else if (focusDistance == 1){
   if(this.model.direction = Direction.back){
       height = stretch;
@@ -144,7 +148,7 @@ $(document).ready(function(){
   $('#scrollover').height(window.innerHeight + (scrolltrigger * 2.0));
   var scrollover = $('#scrollover')[0];
 
-  var options    = {activeHeight: 50, scrolltrigger: scrolltrigger};
+  var options    = {activeHeight: 65, scrolltrigger: scrolltrigger};
   var stack      = new FocusModel($header, $nodes, options);
   window.engine  = new FocusRenderEngine(stack);
   engine.render();

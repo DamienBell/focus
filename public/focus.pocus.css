@@ -3,7 +3,6 @@ body{
 }
 
 #scrollover{
-  background: rgba(0,0,0,0.1);
   height: 0;
 }
 
@@ -19,11 +18,23 @@ body{
 .focus-node{
   overflow: hidden;
   transition: height 0.5s;
-  background: gray;
 }
+
+.focus-node:nth-child(even) {
+  background: #CCC;
+}
+.focus-node:nth-child(odd) {
+ background: #FFF;
+}
+
 .focus-content{
+   max-width: 750px;
+   margin: auto;
    box-sizing: border-box;
-   border: 1px solid black;
-   background: green;
    padding: 8px;
+   position: relative;
+}
+
+.focus-node.active{
+
 }
